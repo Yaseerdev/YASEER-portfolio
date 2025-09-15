@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My GitHub Pages Site</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #6e48aa 0%, #9d50bb 100%);
+            color: #fff;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 800px;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+        
+        h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            color: #ffdd59;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        
+        h2 {
+            font-size: 1.8rem;
+            margin-bottom: 30px;
+            font-weight: 300;
+        }
+        
+        p {
+            font-size: 1.2rem;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+        
+        .steps {
+            text-align: left;
+            background: rgba(255, 255, 255, 0.15);
+            border-radius: 15px;
+            padding: 25px;
+            margin: 30px 0;
+        }
+        
+        .steps h3 {
+            margin-bottom: 15px;
+            color: #ffdd59;
+        }
+        
+        .steps ol {
+            padding-left: 20px;
+        }
+        
+        .steps li {
+            margin-bottom: 10px;
+            line-height: 1.5;
+        }
+        
+        code {
+            background: rgba(0, 0, 0, 0.2);
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: monospace;
+        }
+        
+        .button {
+            display: inline-block;
+            background: #ffdd59;
+            color: #6e48aa;
+            padding: 12px 25px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 20px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+        
+        .button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+            background: #ffd32a;
+        }
+        
+        .warning {
+            background: rgba(255, 107, 107, 0.2);
+            border-left: 4px solid #ff6b6b;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 4px;
+            text-align: left;
+        }
+        
+        footer {
+            margin-top: 40px;
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.7);
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                padding: 25px;
+            }
+            
+            h1 {
+                font-size: 2.5rem;
+            }
+            
+            h2 {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>GitHub Pages Setup</h1>
+        <h2>Resolving 404 Errors</h2>
+        
+        <p>It looks like you're encountering a 404 error when visiting your GitHub Pages site. This usually happens because GitHub can't find an <code>index.html</code> file in your repository.</p>
+        
+        <div class="warning">
+            <strong>Common causes:</strong> Missing index.html, incorrect repository naming, or misconfigured publishing source.
+        </div>
+        
+        <div class="steps">
+            <h3>How to fix this issue:</h3>
+            <ol>
+                <li>Make sure your repository is named <code>username.github.io</code> (replace "username" with your GitHub username)</li>
+                <li>Ensure you have an <code>index.html</code> file in the root of your repository</li>
+                <li>Check that your GitHub Pages publishing source is set correctly (Settings → Pages → Branch)</li>
+                <li>Wait a few minutes after pushing changes as GitHub needs time to build your site</li>
+                <li>If using a custom domain, verify your DNS settings are configured properly</li>
+            </ol>
+        </div>
+        
+        <p>This HTML file serves as a proper <code>index.html</code> that you can use for your site. Simply copy this code, save it as <code>index.html</code>, and push it to your GitHub repository.</p>
+        
+        <a href="https://docs.github.com/en/pages" class="button" target="_blank">GitHub Pages Documentation</a>
+    </div>
+    
+    <footer>
+        <p>If problems persist, check GitHub Status: <a href="https://www.githubstatus.com/" style="color: #ffdd59;">@githubstatus</a></p>
+    </footer>
+</body>
+</html>
