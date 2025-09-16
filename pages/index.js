@@ -37,12 +37,12 @@ export default function Home() {
         
         
         <Head>
-          <title>Yaseer Dauda - Portfolio</title>
+          <title>YASEERDEV</title>
           <meta name="description" content="Professional portfolio showcasing my work and skills" />
           <meta property="og:title" content="Yaseerdev" />
           <meta property="og:description" content="Professional portfolio showcasing my work and skills" />
           <meta property="og:image" content="/images/projects/profile.jpg" />
-          <meta property="og:url" content="https://yourdomain.com" />
+          <meta property="og:url" content="https://yaseerdev.xyz" />
           <meta name="twitter:card" content="summary_large_image" />
           <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
           <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
