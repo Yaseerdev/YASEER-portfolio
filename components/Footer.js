@@ -18,7 +18,7 @@ export default function Footer() {
           <div className="flex justify-center space-x-6 mb-8">
             <motion.a
               href="http://github.com/yaseerdev"
-              className="text-gray-300 hover:text-white transition-colors"
+              className=" -4 text-gray-300 hover:text-white transition-colors"
               whileHover={{ y: -2 }}
             >
               GitHub
