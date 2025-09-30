@@ -24,7 +24,7 @@ export default function Footer() {
               GitHub
             </motion.a>
             <motion.a
-              href="https://www.linkedin.com/in/yaseergaya?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+              href="https://www.linkedin.com/in/yaseer-dauda-4846662b3?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
               className="text-gray-300 hover:text-white transition-colors"
               whileHover={{ y: -2 }}
             >
