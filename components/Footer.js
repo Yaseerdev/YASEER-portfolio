@@ -4,7 +4,7 @@ export default function Footer() {
       <div className="container mx-auto max-w-5xl flex flex-col md:flex-row items-center justify-between gap-6">
         
         <div className="flex flex-col md:flex-row items-center gap-2">
-          <span className="font-bold text-xl tracking-widest text-white">YASEERDEV</span>
+          <span className="font-bold text-xl tracking-widest text-white">YASEER</span>
           <span className="hidden md:block text-gray-600 mx-4">|</span>
           <p className="text-sm">© {new Date().getFullYear()} Yaseerdev. All rights reserved.</p>
         </div>

@@ -10,7 +10,7 @@ export default function Document() {
         <meta property="og:image" content="/images/og-image.jpg" />
         <meta property="og:url" content="https://yourdomain.com" />
         <meta name="twitter:card" content="summary_large_image" />
-        <link rel="icon" href="/favicon.ico" />
+       
       </Head>
       <body>
         <Main />

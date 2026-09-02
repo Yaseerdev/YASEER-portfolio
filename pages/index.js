@@ -37,21 +37,23 @@ export default function Home() {
       <div className="bg-white dark:bg-black transition-colors duration-300 min-h-screen">
         
         
-        <Head>
-          <title>Yaseer Dauda - Portfolio</title>
-          <meta name="description" content="Professional portfolio showcasing my work and skills" />
-          <meta property="og:title" content="Yaseerdev" />
-          <meta property="og:description" content="Professional portfolio showcasing my work and skills" />
-          <meta property="og:image" content="/images/projects/profile.jpg" />
-          <meta property="og:url" content="https://yourdomain.com" />
-          <meta name="twitter:card" content="summary_large_image" />
-          <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
-          <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-          <link rel="shortcut icon" href="/favicon.ico" />
-          <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-          <meta name="apple-mobile-web-app-title" content="Yaseerdev" />
-          <link rel="manifest" href="/site.webmanifest" />
-        </Head>
+       <Head>
+  <title> Founder & Full-Stack Developer | Yaseer Dauda </title>
+  <meta name="description" content="I partner with startups and content creators to architect high-performance web platforms that turn bold ideas into scalable, predictable revenue." />
+  
+  <meta property="og:title" content="Yaseer Dauda | Founder & Full-Stack Developer" />
+  <meta property="og:description" content="I build modern websites, business platforms, and custom digital solutions that help businesses and creators turn their ideas into products people can actually use." />
+  <meta property="og:image" content="/images/projects/profile.jpg" />
+  <meta property="og:url" content="https://yaseer.xyz" />
+  
+  <meta name="twitter:card" content="summary_large_image" />
+  
+  <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="shortcut icon" href="/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <meta name="apple-mobile-web-app-title" content="Yaseer" />
+</Head>
 
         <Navigation darkMode={darkMode} setDarkMode={setDarkMode} />
         

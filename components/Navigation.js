@@ -33,7 +33,7 @@ export default function Navigation({ darkMode, setDarkMode }) {
             <span className="text-white dark:text-gray-900 font-bold text-xl">Y</span>
           </div>
           <span className="font-bold tracking-widest text-xl text-gray-900 dark:text-white">
-            YASEERDEV
+            YASEER
           </span>
         </a>
 
