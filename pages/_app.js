@@ -1,3 +1,8 @@
+import { Inter } from 'next/font/google'
+
+const inter = Inter({ subsets: ['latin'] })
+
+// Then add className={inter.className} to your main wrapper or <body> tag
 import '../styles/globals.css';
 import { useEffect } from 'react';
 import { useRouter } from 'next/router';

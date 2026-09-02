@@ -1,132 +1,77 @@
-// components/Contact.js
-import { useState } from 'react';
 import { motion } from 'framer-motion';
-import emailjs from '@emailjs/browser';
 
 export default function Contact() {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    subject: '',
-    message: ''
-  });
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitMessage, setSubmitMessage] = useState('');
-
-  const handleChange = (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
-  };
-
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-    
-    try {
-      await emailjs.send(
-        'service_bnsgpzd',
-        'template_qj3rchm',
-        formData,
-        'tlcafmVISzhbFraLA'
-      );
-      
-      setSubmitMessage('Message sent successfully!');
-      setFormData({ name: '', email: '', message: '' });
-    } catch (error) {
-      setSubmitMessage('Failed to send message. Please try again.');
-    } finally {
-      setIsSubmitting(false);
-      setTimeout(() => setSubmitMessage(''), 5000);
-    }
-  };
-
   return (
-    <section id="contact" className="py-20 px-8 bg-white dark:bg-black">
-      <div className="container mx-auto max-w-4xl">
+    <section id="contact" className="py-24 px-6 sm:px-10 lg:px-12 bg-gray-50 dark:bg-black">
+      <div className="container mx-auto max-w-4xl text-center">
         <motion.h2 
-          className="text-3xl md:text-4xl font-bold text-center text-gray-800 dark:text-white mb-4"
+          className="text-4xl md:text-6xl font-bold text-gray-900 dark:text-white mb-6 leading-tight tracking-tight"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
         >
-          Get In Touch
+          Ready to Build Something <span className="text-gray-400">Impactful?</span>
         </motion.h2>
         
         <motion.p 
-          className="text-center text-gray-600 dark:text-gray-300 mb-12"
+          className="text-lg md:text-xl text-gray-600 dark:text-gray-300 mb-10 max-w-2xl mx-auto"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.1 }}
         >
-          Have a project in mind or want to chat? Feel free to reach out!
+          Let's discuss your project and how I can help you turn your idea into a scalable, revenue-generating platform.
         </motion.p>
         
-        <motion.form 
-          className="bg-white-200 dark:bg-gray-900 p-8 rounded-xl shadow-lg"
+        <motion.div 
+          className="flex flex-col sm:flex-row justify-center gap-4 mb-16"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.2 }}
-          onSubmit={handleSubmit}
         >
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-            <div>
-              <label htmlFor="name" className="block text-gray-700 dark:text-gray-300 mb-2">Name</label>
-              <input
-                type="text"
-                id="name"
-                name="name"
-                value={formData.name}
-                onChange={handleChange}
-                className="w-full px-4 py-3 border border-gray-300 dark:border-gray-700 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-gray-800 dark:text-white"
-                required
-              />
-            </div>
-            
-            <div>
-              <label htmlFor="email" className="block text-gray-700 dark:text-gray-300 mb-2">Email</label>
-              <input
-                type="email"
-                id="email"
-                name="email"
-                value={formData.email}
-                onChange={handleChange}
-                className="w-full px-4 py-3 border border-gray-300 dark:border-gray-700 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-gray-800 dark:text-white"
-                required
-              />
-            </div>
-          </div>
-          
-          <div className="mb-6">
-            <label htmlFor="message" className="block text-gray-700 dark:text-gray-300 mb-2">Message</label>
-            <textarea
-              id="message"
-              name="message"
-              value={formData.message}
-              onChange={handleChange}
-              rows={5}
-              className="w-full px-4 py-3 border border-gray-300 dark:border-gray-700 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-gray-800 dark:text-white"
-              required
-            ></textarea>
-          </div>
-          
-          <motion.button
-            type="submit"
-            className="w-full py-3 bg-blue-600 text-white rounded-lg font-medium hover:bg-blue-700 transition-colors disabled:opacity-50"
+      
+          <motion.a
+            href={`mailto:yaseerdaudagaya10@gmail.com?subject=${encodeURIComponent('Project Inquiry')}&body=${encodeURIComponent('Hi Yaseer, I would like to discuss a project with you.')}`}
+            className="px-8 py-4 bg-gray-900 text-white rounded-lg font-medium hover:bg-black transition-colors"
             whileHover={{ y: -2 }}
             whileTap={{ y: 0 }}
-            disabled={isSubmitting}
           >
-            {isSubmitting ? 'Sending...' : 'Send Message'}
-          </motion.button>
+            Start a Conversation
+          </motion.a>
           
-          {submitMessage && (
-            <p className={`mt-4 text-center ${submitMessage.includes('successfully') ? 'text-green-600' : 'text-red-600'}`}>
-              {submitMessage}
-            </p>
-          )}
-        </motion.form>
+          
+          <motion.a
+            href="mailto:yaseerdaudagaya10@gmail.com"
+            className="px-8 py-4 border-2 border-gray-300 text-gray-900 dark:text-white rounded-lg font-medium hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
+            whileHover={{ y: -2 }}
+            whileTap={{ y: 0 }}
+          >
+            Email Me Directly
+          </motion.a>
+        </motion.div>
+
+        <motion.div 
+          className="flex flex-col md:flex-row justify-center gap-8 border-t border-gray-200 dark:border-gray-800 pt-8 text-gray-600 dark:text-gray-300"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, delay: 0.3 }}
+        >
+          <div className="flex items-center justify-center gap-2">
+            <span className="text-gray-900 dark:text-white font-bold">✓</span>
+            <span className="font-medium">24-Hour Response Guarantee</span>
+          </div>
+          <div className="flex items-center justify-center gap-2">
+            <span className="text-gray-900 dark:text-white font-bold">✓</span>
+            <span className="font-medium">Free Initial Consultation</span>
+          </div>
+          <div className="flex items-center justify-center gap-2">
+            <span className="text-gray-900 dark:text-white font-bold">✓</span>
+            <span className="font-medium">Direct Founder Access</span>
+          </div>
+        </motion.div>
       </div>
     </section>
   );

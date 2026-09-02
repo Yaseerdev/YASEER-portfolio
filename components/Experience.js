@@ -1,56 +1,61 @@
 import { motion } from 'framer-motion';
-import { useInView } from 'react-intersection-observer';
 
-const experiences = [
+const experience = [
   {
-    id: 1,
-    role: 'Senior Frontend Developer',
-    company: 'Tech Company',
-    period: '2025 - Present',
-    description: 'Led the frontend development of multiple projects using React and Next.js. Collaborated with designers and backend developers to deliver high-quality web applications.',
+    role: 'Founder & Lead Developer',
+    company: 'Stable Bricks Engineering',
+    date: '2025 - Present',
+    description: 'Leading the frontend development of multiple projects using React and Next.js. Collaborating with designers and backend developers to deliver high-quality web applications that scale.',
   },
   {
-    id: 2,
-    role: 'Frontend Developer',
-    company: 'Startup',
-    period: '2020 - 2025',
-    description: 'Developed and maintained user-facing features using modern JavaScript frameworks. Improved website performance and accessibility.',
+    role: 'Full Stack Developer',
+    company: 'Freelance / Startups',
+    date: '2020 - 2025',
+    description: 'Developed and maintained user-facing features using modern JavaScript frameworks. Improved website performance and accessibility, driving higher user engagement.',
   },
 ];
 
 export default function Experience() {
-  const [ref, inView] = useInView({
-    triggerOnce: true,
-    threshold: 0.1,
-  });
-
   return (
-    <section id="experience" className="py-20 px-12">
-      <div className="container mx-auto max-w-4xl">
+    <section id="experience" className="py-20 px-6 sm:px-10 lg:px-12 bg-white dark:bg-black">
+      <div className="container mx-auto max-w-5xl">
         <motion.h2 
-          className="text-3xl md:text-4xl font-bold text-center text-gray-800 dark:text-white mb-4"
+          className="text-3xl md:text-4xl font-bold text-left text-gray-900 dark:text-white mb-12"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
         >
-          Experience & Education
+          Experience
         </motion.h2>
-        
-        <div className="space-y-12" ref={ref}>
-          {experiences.map((exp, index) => (
+
+        <div className="flex flex-col">
+          {experience.map((job, index) => (
             <motion.div
-              key={exp.id}
-              className="relative pl-8 border-l-2 border-green-900"
-              initial={{ opacity: 0, x: -20 }}
-              whileInView={{ opacity: 1, x: 0 }}
+              key={index}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: index * 0.2 }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+              className="grid grid-cols-1 md:grid-cols-3 gap-4 py-6 border-t border-gray-200 dark:border-gray-800"
             >
-              <div className="absolute -left-2 top-0 w-4 h-4 bg-green-900 rounded-full"></div>
-              <h3 className="text-xl font-semibold text-gray-800 dark:text-white">{exp.role}</h3>
-              <p className="text-gray-600 dark:text-gray-400 mb-2">{exp.company} • {exp.period}</p>
-              <p className="text-gray-600 dark:text-gray-300">{exp.description}</p>
+            
+              <div className="text-sm font-medium text-gray-500 dark:text-gray-400">
+                {job.date}
+              </div>
+
+            
+              <div className="md:col-span-2">
+                <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">
+                  {job.role}
+                </h3>
+                <p className="text-gray-500 dark:text-gray-400 mb-4 font-medium">
+                  {job.company}
+                </p>
+                <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
+                  {job.description}
+                </p>
+              </div>
             </motion.div>
           ))}
         </div>

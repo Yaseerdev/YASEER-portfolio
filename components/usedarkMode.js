@@ -21,7 +21,7 @@ export default function useDarkMode() {
   }, []);
 
   useEffect(() => {
-    // Only run this after component has mounted
+   
     if (!mounted) return;
     
     if (typeof window !== 'undefined') {

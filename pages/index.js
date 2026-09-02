@@ -14,6 +14,7 @@ import Experience from '../components/Experience';
 import Contact from '../components/Contact';
 import Footer from '../components/Footer';
 import Navigation from '../components/Navigation';
+
 export default function Home() {
   const [darkMode, setDarkMode] = useDarkMode();
   const [mounted, setMounted] = useState(false);
