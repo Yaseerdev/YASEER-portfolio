@@ -42,7 +42,7 @@ export default function About() {
             
             <div className="flex gap-12 border-t border-gray-200 dark:border-gray-800 pt-6 mb-8">
               <div>
-                <p className="text-3xl font-bold text-gray-900 dark:text-white">7+</p>
+                <p className="text-3xl font-bold text-gray-900 dark:text-white">5+</p>
                 <p className="text-sm text-gray-500 dark:text-gray-400">Years Experience</p>
               </div>
               <div>
